@@ -1,18 +1,28 @@
 import getTocTemplate from '../toc';
-import {IChapter} from "../../types";
+import {Directory, Extension, IChapter, MediaType} from "../../types";
 
 describe('Table of Contents parsing tests', () => {
 
   const content: IChapter[] = [
     {
-      title: 'My new eBook',
-      author: 'Jimmy',
-      href: 'new-book.xhtml'
+      id: 'new-book1',
+      title: 'New Book 1',
+      dir: Directory.CHAPTERS,
+      extension: Extension.XHTML,
+      mediaType: MediaType.APPLICATION_XHTML_XML,
+      get href() {
+        return `${this.dir}/${this.id}.${this.extension}`
+      }
     },
     {
-      title: 'My new eBook 2',
-      author: 'Sam',
-      href: 'new-book2.xhtml'
+      id: 'new-book2',
+      title: 'New Book 2',
+      dir: Directory.CHAPTERS,
+      extension: Extension.XHTML,
+      mediaType: MediaType.APPLICATION_XHTML_XML,
+      get href() {
+        return `${this.dir}/${this.id}.${this.extension}`
+      }
     }
   ];
 

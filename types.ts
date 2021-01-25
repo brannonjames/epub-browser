@@ -1,7 +1,10 @@
-export interface IChapter {
+export interface IChapter extends IContent {
   title: string
-  author: string
-  href: string
+  author?: string
+}
+
+export enum Directory {
+  CHAPTERS = 'chapters'
 }
 
 export enum MediaType {
@@ -35,4 +38,16 @@ export interface IContentTemplateProps {
   cover?: IImage
   content: IContent[]
   fonts: IFont[]
+}
+
+export interface ChapterOption {
+  title: string
+  author?: string
+  data: string
+}
+
+export interface EpubOptions {
+  title: string
+  author: string
+  chapters: ChapterOption[]
 }
