@@ -67,7 +67,7 @@ class Epub {
 
     this.zip.file(`${Directory.OEBPS}/content.opf`, getContentTemplate(options));
 
-    this.zip.file(`${Directory.OEBPS}/toc.ncx.opf`, getTOCNCXTemplate(options));
+    this.zip.file(`${Directory.OEBPS}/toc.ncx`, getTOCNCXTemplate(options));
 
     this.zip.file(`${Directory.OEBPS}/toc.xhtml`, getTOCTemplate(this.chapters));
 
