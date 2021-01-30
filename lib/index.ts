@@ -25,12 +25,12 @@ class Epub {
     this.generateFiles();
   }
 
-  public async download() {
+  public download = async () => {
     const blob = await this.zip.generateAsync({ type: 'blob', mimeType: 'application/epub+zip' });
     saveAs(blob);
   }
 
-  private createChapter(chapter: ChapterOption, index: number) {
+  private createChapter = (chapter: ChapterOption, index: number) => {
     const { title, author } = chapter;
     const id = generateChapterIdFromName(index, title);
     const serrializer = this.serializer;
