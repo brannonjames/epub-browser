@@ -1,4 +1,4 @@
-import {IContentTemplateProps} from "../types";
+import {IContent, IContentTemplateProps} from "../types";
 
 export default (options: IContentTemplateProps) => {
   const date = new Date();

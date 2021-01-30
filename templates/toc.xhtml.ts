@@ -25,7 +25,7 @@ export default (content: IChapter[]) => {
                 <li class="table-of-content">
                   <a href="${chapter.href}">${chapter.title} - <span class="toc-author">${chapter.author}</span></a>
                 </li>
-              `))}                
+              `))}               
               
           </ol>
       </nav>

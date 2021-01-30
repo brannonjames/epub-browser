@@ -1,10 +1,13 @@
 export interface IChapter extends IContent {
   title: string
   author?: string
+  html: HTMLDocument
+  htmlString: string
 }
 
 export enum Directory {
-  CHAPTERS = 'chapters'
+  OEBPS = './OEBPS',
+  METAINF = './META-INF'
 }
 
 export enum MediaType {
@@ -36,14 +39,14 @@ export interface IContentTemplateProps {
   publisher?: string
   images: IImage[]
   cover?: IImage
-  content: IContent[]
+  content: IChapter[]
   fonts: IFont[]
 }
 
 export interface ChapterOption {
   title: string
   author?: string
-  data: string
+  html: string
 }
 
 export interface EpubOptions {
