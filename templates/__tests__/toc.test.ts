@@ -1,4 +1,4 @@
-import getTocTemplate from '../toc';
+import getTocTemplate from '../toc.ncx';
 import {Directory, Extension, IChapter, MediaType} from "../../types";
 
 describe('Table of Contents parsing tests', () => {
@@ -10,6 +10,8 @@ describe('Table of Contents parsing tests', () => {
       dir: Directory.CHAPTERS,
       extension: Extension.XHTML,
       mediaType: MediaType.APPLICATION_XHTML_XML,
+      html: new HTMLDocument(),
+      htmlString: '',
       get href() {
         return `${this.dir}/${this.id}.${this.extension}`
       }
@@ -20,6 +22,8 @@ describe('Table of Contents parsing tests', () => {
       dir: Directory.CHAPTERS,
       extension: Extension.XHTML,
       mediaType: MediaType.APPLICATION_XHTML_XML,
+      html: new HTMLDocument(),
+      htmlString: '',
       get href() {
         return `${this.dir}/${this.id}.${this.extension}`
       }

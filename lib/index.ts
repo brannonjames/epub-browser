@@ -1,6 +1,6 @@
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
-import {ChapterOption, Directory, EpubOptions, Extension, IChapter, IFont, IImage, MediaType} from "../types";
+import {ChapterOption, Directory, EpubOptions, Extension, IChapter, MediaType} from "../types";
 import {generateChapterIdFromName, parseHTMLString} from "./utilities";
 import getContentTemplate from '../templates/content.opf';
 import getTOCNCXTemplate from '../templates/toc.ncx';

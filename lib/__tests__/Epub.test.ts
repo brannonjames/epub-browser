@@ -1,4 +1,4 @@
-import {Directory, EpubOptions, Extension, IChapter} from "../../types";
+import {Directory, EpubOptions, Extension} from "../../types";
 import Epub from "../index";
 
 describe('Tests around main class', () => {

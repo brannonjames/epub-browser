@@ -7,7 +7,8 @@ export interface IChapter extends IContent {
 
 export enum Directory {
   OEBPS = './OEBPS',
-  METAINF = './META-INF'
+  METAINF = './META-INF',
+  CHAPTERS = './chapters',
 }
 
 export enum MediaType {
